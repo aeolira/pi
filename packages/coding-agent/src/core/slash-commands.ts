@@ -1,4 +1,5 @@
 import { APP_NAME } from "../config.ts";
+import { t } from "../i18n/i18n.ts";
 import type { SourceInfo } from "./source-info.ts";
 
 export type SlashCommandSource = "extension" | "prompt" | "skill";
@@ -15,26 +16,28 @@ export interface BuiltinSlashCommand {
 	description: string;
 }
 
-export const BUILTIN_SLASH_COMMANDS: ReadonlyArray<BuiltinSlashCommand> = [
-	{ name: "settings", description: "Open settings menu" },
-	{ name: "model", description: "Select model (opens selector UI)" },
-	{ name: "scoped-models", description: "Enable/disable models for Ctrl+P cycling" },
-	{ name: "export", description: "Export session (HTML default, or specify path: .html/.jsonl)" },
-	{ name: "import", description: "Import and resume a session from a JSONL file" },
-	{ name: "share", description: "Share session as a secret GitHub gist" },
-	{ name: "copy", description: "Copy last agent message to clipboard" },
-	{ name: "name", description: "Set session display name" },
-	{ name: "session", description: "Show session info and stats" },
-	{ name: "changelog", description: "Show changelog entries" },
-	{ name: "hotkeys", description: "Show all keyboard shortcuts" },
-	{ name: "fork", description: "Create a new fork from a previous user message" },
-	{ name: "clone", description: "Duplicate the current session at the current position" },
-	{ name: "tree", description: "Navigate session tree (switch branches)" },
-	{ name: "login", description: "Configure provider authentication" },
-	{ name: "logout", description: "Remove provider authentication" },
-	{ name: "new", description: "Start a new session" },
-	{ name: "compact", description: "Manually compact the session context" },
-	{ name: "resume", description: "Resume a different session" },
-	{ name: "reload", description: "Reload keybindings, extensions, skills, prompts, and themes" },
-	{ name: "quit", description: `Quit ${APP_NAME}` },
-];
+export function getBuiltinSlashCommands(): ReadonlyArray<BuiltinSlashCommand> {
+	return [
+		{ name: "settings", description: t("slash.settings") },
+		{ name: "model", description: t("slash.model") },
+		{ name: "scoped-models", description: t("slash.scoped-models") },
+		{ name: "export", description: t("slash.export") },
+		{ name: "import", description: t("slash.import") },
+		{ name: "share", description: t("slash.share") },
+		{ name: "copy", description: t("slash.copy") },
+		{ name: "name", description: t("slash.name") },
+		{ name: "session", description: t("slash.session") },
+		{ name: "changelog", description: t("slash.changelog") },
+		{ name: "hotkeys", description: t("slash.hotkeys") },
+		{ name: "fork", description: t("slash.fork") },
+		{ name: "clone", description: t("slash.clone") },
+		{ name: "tree", description: t("slash.tree") },
+		{ name: "login", description: t("slash.login") },
+		{ name: "logout", description: t("slash.logout") },
+		{ name: "new", description: t("slash.new") },
+		{ name: "compact", description: t("slash.compact") },
+		{ name: "resume", description: t("slash.resume") },
+		{ name: "reload", description: t("slash.reload") },
+		{ name: "quit", description: t("slash.quit", { app: APP_NAME }) },
+	];
+}

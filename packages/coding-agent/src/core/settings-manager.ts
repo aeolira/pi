@@ -113,6 +113,7 @@ export interface Settings {
 	sessionDir?: string; // Custom session storage directory (same format as --session-dir CLI flag)
 	httpIdleTimeoutMs?: number; // HTTP header/body idle timeout in milliseconds; 0 disables it
 	websocketConnectTimeoutMs?: number; // WebSocket connect/open handshake timeout in milliseconds; 0 disables it
+	language?: "en" | "zh-CN";
 }
 
 /** Deep merge settings: project/overrides take precedence, nested objects merge recursively */
@@ -650,6 +651,17 @@ export class SettingsManager {
 		this.globalSettings.theme = theme;
 		this.markModified("theme");
 		this.save();
+	}
+
+	getLanguage(): "en" | "zh-CN" | undefined {
+		return this.settings.language;
+	}
+
+	setLanguage(language: "en" | "zh-CN"): void {
+		this.globalSettings.language = language;
+		this.markModified("language");
+		this.save();
+		this.settings.language = language;
 	}
 
 	getDefaultThinkingLevel(): "off" | "minimal" | "low" | "medium" | "high" | "xhigh" | undefined {
