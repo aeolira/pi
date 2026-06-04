@@ -139,6 +139,36 @@
       ]
     }
   ],
+    {
+      "title": "中文文档",
+      "items": [
+        {
+          "title": "概览",
+          "path": "index.zh-CN.md"
+        },
+        {
+          "title": "快速开始",
+          "path": "quickstart.zh-CN.md"
+        },
+        {
+          "title": "使用 Pi",
+          "path": "usage.zh-CN.md"
+        },
+        {
+          "title": "提供商",
+          "path": "providers.zh-CN.md"
+        },
+        {
+          "title": "设置",
+          "path": "settings.zh-CN.md"
+        },
+        {
+          "title": "快捷键",
+          "path": "keybindings.zh-CN.md"
+        }
+      ]
+    }
+  ],
   "redirects": [
     {
       "from": "session.md",

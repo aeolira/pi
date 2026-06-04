@@ -79,3 +79,11 @@ For the full first-run flow, see [Quickstart](quickstart.md).
 ## Development
 
 - [Development](development.md) - local setup, project structure, and debugging.
+
+## 中文文档
+
+- [快速开始](quickstart.zh-CN.md) - 安装、认证并运行首次会话。
+- [使用 Pi](usage.zh-CN.md) - 交互模式、斜杠命令、上下文文件以及 CLI 参考。
+- [提供商](providers.zh-CN.md) - 内置提供商的订阅和 API key 配置。
+- [设置](settings.zh-CN.md) - 全局和项目设置。
+- [快捷键](keybindings.zh-CN.md) - 默认快捷键和自定义键绑定。
