@@ -4172,7 +4172,7 @@ export class InteractiveMode {
 		const allModels = this.session.modelRegistry.getAvailable();
 
 		if (allModels.length === 0) {
-			this.showStatus("No models available");
+			this.showStatus("没有可用模型");
 			return;
 		}
 

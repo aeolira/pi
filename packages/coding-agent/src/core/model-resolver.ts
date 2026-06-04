@@ -355,7 +355,7 @@ export function resolveCliModel(options: {
 		return {
 			model: undefined,
 			warning: undefined,
-			error: "No models available. Check your installation or add models to models.json.",
+			error: "没有可用模型。检查你的安装或在 models.json 中添加模型。",
 		};
 	}
 

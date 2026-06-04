@@ -312,7 +312,7 @@ describe("resolveCliModel", () => {
 		});
 
 		expect(result.model).toBeUndefined();
-		expect(result.error).toContain("No models available");
+		expect(result.error).toContain("没有可用模型");
 	});
 
 	test("prefers provider/model split over gateway model with matching id", () => {
